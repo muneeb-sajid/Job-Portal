@@ -1,0 +1,303 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+  overflow-x:hidden;
+}
+
+.container {
+    display: flex;
+    width: fit-content;
+    height: 570px;
+    padding: 10px;
+    background-color: #23463f;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin: 100px;
+    gap: 20px;
+    color: #d2e5e1;
+}
+
+#h1 {
+    font-size: xx-large;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #d2e5e1;
+}
+
+.input-container {
+    position: relative;
+    width: 450px;
+    background-color: #d2e5e1;
+    border-radius: 30px;
+}
+
+.input-container input {
+    outline: none;
+    height: 50px;
+    width: 100%;
+    padding: 8px 40px 8px 8px;
+    box-sizing: border-box;
+    color: rgb(96, 92, 92);
+}
+
+.input-container button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px 10px;
+    width: 100px;
+    border: none;
+    background: #3f8678;
+    color: #d2e5e1;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+input::placeholder {
+    color: rgb(96, 92, 92);
+}
+
+.input-container button:hover {
+    background: #45a049;
+}
+
+.pic-sec {
+    position: sticky;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#img1, #img2 {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* -------------------
+   ✅ RESPONSIVE
+------------------- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .text {
+        width: 90%;
+        margin: 40px 0;
+        gap: 15px;
+    }
+
+    #h1 {
+        font-size: x-large;
+        text-align: center;
+    }
+
+    .input-container {
+        width: 90%;
+    }
+
+    .pic-sec {
+        position: static;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    #img1, #img2 {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    #h1 {
+        font-size: large;
+    }
+
+    .input-container button {
+        width: 80px;
+        font-size: 14px;
+    }
+}
+.container2{
+    padding:20px;
+  display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(210, 215, 218);
+    flex-direction: column;
+}
+.comp{
+       font-size: 20px;
+       font-weight: bold;
+       color:rgb(45, 44, 42);
+       font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+/* Overall Section Styling (remains mostly the same) */
+.tech-giants-section {
+    background-color: #dbe4eb;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 40px auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tech-giants-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+    font-weight: normal;
+}
+
+.tech-giants-section p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Company Grid Styling (remains the same) */
+.company-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+/* Individual Company Card Styling (remains mostly the same) */
+.company-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Ensures logo is top, name bottom if card height is dynamic */
+    min-height: 180px; /* Consistent height */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.company-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Company Logo Container Styling */
+.company-logo {
+    margin-bottom: 15px; /* Space between icon and name */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* We can set a fixed height/width for the container, and the SVG will size itself within */
+    height: 80px; /* Matches the `size` prop used in JSX for consistency */
+    width: 100%;
+}
+
+/* Styling for the SVG icons within the logo container */
+.company-logo svg {
+    /* React Icons often set size via props, but you can override or fine-tune here */
+    max-width: 100%;
+    max-height: 100%;
+    /* You can set a default color for icons if desired, e.g., fill: #333; */
+    /* Many brand icons come with their specific brand color, so often best to leave fill default */
+}
+
+
+.company-name {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Responsive adjustments (remain the same) */
+@media (max-width: 900px) {
+    .company-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+    }
+    .company-card {
+        min-height: 160px;
+        padding: 15px;
+    }
+    .company-logo {
+        height: 70px;
+        margin-bottom: 10px;
+    }
+    .company-logo svg {
+        max-height: 70px;
+    }
+    .company-name {
+        font-size: 1.15em;
+    }
+}
+
+@media (max-width: 600px) {
+    .tech-giants-section {
+        padding: 30px 15px;
+        margin: 20px auto;
+    }
+    .tech-giants-section h2 {
+        font-size: 2em;
+    }
+    .tech-giants-section p {
+        font-size: 1em;
+    }
+    .company-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+    }
+    .company-card {
+        min-height: 140px;
+        padding: 12px;
+    }
+    .company-logo {
+        height: 60px;
+    }
+    .company-logo svg {
+        max-height: 60px;
+    }
+    .company-name {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 400px) {
+    .company-grid {
+        grid-template-columns: 1fr;
+    }
+    .company-card {
+        min-height: auto;
+    }
+}

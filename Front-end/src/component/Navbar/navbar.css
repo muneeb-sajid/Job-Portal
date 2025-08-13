@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+/* Base styles */
+.parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #23463f;
+    height: 70px;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    color: white;
+    font-size: 2rem;
+}
+
+.logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #23463f;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.table {
+    display: flex;
+    align-items: center;
+    position:sticky;
+}
+
+.table ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.table li {
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+#btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: none;
+    color: #23463f;
+    border-radius: 5px;
+    width: 50px;
+    font-weight: bold;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+/* =============== RESPONSIVE =============== */
+@media (max-width: 768px) {
+    .parent {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .table ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #btn {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+.dropdown {
+  position: relative;
+ 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  z-index: 10;
+  min-width: 140px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content p {
+  margin: 0 0 10px;
+  font-weight: bold;
+  color:black;
+}
+
+.dropdown-content button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

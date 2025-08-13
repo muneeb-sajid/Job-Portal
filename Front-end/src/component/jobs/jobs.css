@@ -1,0 +1,223 @@
+/* General Body and Font Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* Assuming Inter font is available or linked */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f4f6; /* Light gray background */
+  color: #1f2937; /* Dark text color */
+}
+
+/* Jobs Page Container */
+.jobs-page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem; /* Padding for small screens */
+}
+
+/* Jobs Container */
+.jobs-container {
+  max-width: 1280px; /* Max width for content */
+  width: 100%;
+  margin: 0 auto; /* Center the container */
+  padding: 1.5rem; /* Padding for medium screens */
+}
+
+@media (min-width: 1024px) { /* Larger padding for large screens */
+  .jobs-container {
+    padding: 2rem;
+  }
+}
+
+/* Heading Styles */
+.jobs-heading {
+  font-size: 2.25rem; /* Large heading font size */
+  font-weight: 800; /* Extra bold font weight */
+  text-align: center;
+  color: #1f2937; /* Dark heading color */
+  margin-bottom: 2.5rem; /* Space below heading */
+  margin-top: 1.5rem; /* Space above heading for small screens */
+}
+
+@media (min-width: 768px) { /* Adjust top margin for medium screens */
+  .jobs-heading {
+    margin-top: 2.5rem;
+  }
+}
+
+/* Job Grid */
+.job-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for small screens */
+  gap: 1.5rem; /* Gap between grid items */
+}
+
+@media (min-width: 768px) { /* Two columns for medium screens */
+  .job-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) { /* Three columns for large screens */
+  .job-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Job Card */
+.job-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem; /* Rounded corners */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Soft shadow */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition on hover */
+  overflow: hidden;
+  border: 1px solid #e5e7eb; /* Light border */
+}
+
+.job-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Larger shadow on hover */
+}
+
+.job-card-content {
+  padding: 1.5rem; /* Padding inside the card */
+}
+
+/* Job Title */
+.job-title {
+  font-size: 1.5rem; /* Job title font size */
+  font-weight: 700; /* Bold font weight */
+  color: #1f2937; /* Dark job title color */
+  margin-bottom: 0.5rem; /* Space below title */
+}
+
+/* Company Name */
+.job-company {
+  font-size: 1.125rem; /* Company name font size */
+  color: #2563eb; /* Blue color for company name */
+  font-weight: 600; /* Semi-bold font weight */
+  margin-bottom: 0.25rem; /* Space below company name */
+}
+
+/* Location */
+.job-location {
+  font-size: 1rem; /* Location font size */
+  color: #4b5563; /* Gray color for location */
+  margin-bottom: 1rem; /* Space below location */
+}
+
+/* Job Description */
+.job-description {
+  color: #374151; /* Medium gray for description */
+  margin-bottom: 1rem; /* Space below description */
+  font-size: 0.875rem; /* Small font size */
+  line-height: 1.5; /* Good line height for readability */
+}
+
+/* Job Meta (Type, Posted, Salary) */
+.job-meta {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  align-items: center;
+  justify-content: space-between;
+  color: #6b7280; /* Light gray for meta info */
+  font-size: 0.875rem; /* Small font size */
+  margin-bottom: 1rem; /* Space below meta info */
+}
+
+.job-meta-item {
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem; /* Space between meta items */
+  margin-bottom: 0.25rem; /* Small space for wrapped items */
+}
+
+.job-icon {
+  width: 1rem; /* Icon size */
+  height: 1rem; /* Icon size */
+  margin-right: 0.25rem; /* Space between icon and text */
+  color: #9ca3af; /* Light gray icon color */
+}
+
+/* Apply Button */
+.apply-button {
+  width: 100%; /* Full width button */
+  background-color: #2563eb; /* Blue background */
+  color: #ffffff; /* White text */
+  font-weight: 700; /* Bold font weight */
+  padding: 0.75rem 1rem; /* Vertical and horizontal padding */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Soft shadow */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions */
+  cursor: pointer;
+  border: none; /* Remove default button border */
+}
+
+.apply-button:hover {
+  background-color: #1d4ed8; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.apply-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Blue ring on focus */
+}
+
+/* Custom Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(75, 85, 99, 0.5); /* Semi-transparent gray background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50; /* Ensure modal is on top */
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 1.5rem; /* Padding inside modal */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Large shadow */
+  max-width: 28rem; /* Max width for modal content */
+  width: 100%;
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 1.25rem; /* Modal title font size */
+  font-weight: 600; /* Semi-bold font weight */
+  margin-bottom: 1rem; /* Space below title */
+  color: #1f2937; /* Dark modal title color */
+}
+
+.modal-message {
+  color: #374151; /* Medium gray for message */
+  margin-bottom: 1.5rem; /* Space below message */
+}
+
+.modal-close-button {
+  background-color: #2563eb; /* Blue background */
+  color: #ffffff; /* White text */
+  font-weight: 700; /* Bold font weight */
+  padding: 0.5rem 1rem; /* Vertical and horizontal padding */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Soft shadow */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions */
+  cursor: pointer;
+  border: none; /* Remove default button border */
+}
+
+.modal-close-button:hover {
+  background-color: #1d4ed8; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.modal-close-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Blue ring on focus */
+}
