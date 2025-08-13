@@ -5,16 +5,21 @@ A MERN stack-based web application that allows users to browse, apply for jobs, 
 ---
 
 ## 🚀 Features
+- Dashboard for Applicant to see how much jobs he viewed, saved, Job offers , Applied Jobs
+- Dashboard for Employer to see how much total users are there, total jobs, Posted Jobs, Pending Applications
+
 
 ### 👤 User
 - Browse available job postings
 - Search and filter jobs
+- Upload Resume
 - View job details
 - Apply for jobs
 - Save favorite jobs
 
-### 🛠 Admin
-- Add, update, and delete job postings
+### 🛠 Employer
+- Add Jobs
+- View applied applications
 - Manage applications
 - View statistics (applications, saved jobs, views)
 
@@ -45,7 +50,7 @@ npm install
 
 cd front-end
 npm install
-
+ 
 
 JWT_SECRET=your_secret_key
 ▶️ Run the project
