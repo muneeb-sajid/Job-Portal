@@ -73,4 +73,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 📧 Contact
 Your Name – muneebsajid.1247@gmail.com
-GitHub: muneeb-sajid
+GitHub: http://github.com/muneeb-sajid
