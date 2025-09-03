@@ -16,6 +16,7 @@ A MERN stack-based web application that allows users to browse, apply for jobs, 
 - View job details
 - Apply for jobs
 - Save favorite jobs
+- Added your Resume
 
 ### 🛠 Employer
 - Add Jobs
