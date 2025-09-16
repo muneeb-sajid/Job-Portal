@@ -38,7 +38,7 @@ const ApplicantJobs = () => {
   }, []);
 
   
-  
+  console.log("Hello Viewer:");
 
   const selectedJob = adminJobs.find(job => job.id === selectedJobId);
   const handleJobSelect = (jobId) => {
